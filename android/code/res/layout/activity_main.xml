@@ -1,16 +1,143 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<xnc.widget.SlideHolder xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/slideHolder"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   
     tools:context=".MainActivity" >
 
-    <TextView
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_height="fill_parent"
+        android:background="@drawable/sidebar_bg"
+        
+         >
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:orientation="vertical" >
+
+           <RelativeLayout
+                      android:id ="@+id/menu_guangchang"
+                    android:layout_height ="wrap_content"
+                    android:paddingLeft ="50dp"
+                    android:paddingRight ="70dp"
+                    android:paddingTop ="8dp"
+                    android:paddingBottom ="8dp"
+        
+                    android:layout_width ="wrap_content" >
+                   
+                    <ImageView
+                        android:id ="@+id/menu_image_guangchang"
+                         android:layout_width ="30dp"
+                         android:layout_height ="30dp"
+                         android:layout_marginRight ="6dp"
+                         android:contentDescription = "@string/menu_guangchang"
+                         android:src ="@drawable/home"
+                         android:layout_marginBottom ="4dp"
+                         android:layout_marginTop ="4dp" >
+                     </ImageView>
+                     <TextView
+                         android:layout_width ="wrap_content"
+                         android:layout_height ="wrap_content"
+                         android:text ="@string/menu_guangchang"
+                         android:layout_marginTop ="4dp"
+                         android:layout_toRightOf ="@+id/menu_image_guangchang"
+                         android:textSize ="20sp" >
+                     </TextView>
+                   
+                </RelativeLayout>
+                <RelativeLayout
+                      android:id ="@+id/menu_week_videos"
+                    android:layout_height ="wrap_content"
+                    android:paddingLeft ="50dp"
+                    android:paddingRight ="70dp"
+                    android:paddingTop ="8dp"
+                    android:paddingBottom ="8dp"
+                  
+                    android:layout_width ="wrap_content" >
+                   
+                    <ImageView
+          				 android:id ="@+id/menu_image_week_videos"
+                         android:layout_width ="30dp"
+                         android:layout_height ="30dp"
+                         android:layout_marginRight ="6dp"
+                         android:contentDescription = "@string/menu_week_videos"
+                         android:src ="@drawable/square"
+                         android:layout_marginBottom ="4dp"
+                         android:layout_marginTop ="4dp" >
+                     </ImageView>
+                     <TextView
+                         android:layout_width ="wrap_content"
+                         android:layout_height ="wrap_content"
+                         android:text ="@string/menu_week_videos"
+                         android:layout_marginTop ="4dp"
+                         android:layout_toRightOf ="@+id/menu_image_week_videos"
+                         android:textSize ="20sp" >
+                     </TextView>
+                   
+                </RelativeLayout>
+           
+
+
+            
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="fill_parent" >
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6sp"
+             android:background="@drawable/sidebar_bg"
+            android:orientation="horizontal"
+            >
+                
+                <ImageView
+     				android:id = "@+id/menu_toggle"
+                    android:layout_width ="80dp"
+                    android:layout_height ="40dp"
+                    android:contentDescription = "@string/menu_week_videos"
+                    android:src ="@drawable/toggle"
+                    android:layout_alignParentLeft = "true"
+		            android:layout_alignParentTop = "true" >
+                </ImageView>
+                <ImageView
+     				android:id ="@+id/main_title"
+                    android:layout_width ="100dp"
+                    android:layout_height ="40dp"
+                    android:layout_marginRight ="6dp"
+                    android:contentDescription = "@string/menu_week_videos"
+                    android:src ="@drawable/title"
+                    android:layout_toRightOf ="@+id/menu_toggle"
+                    android:gravity="center_horizontal"  
+                    android:layout_marginBottom ="4dp"
+                    android:layout_marginTop ="4dp" >
+                </ImageView>
+                <ImageView
+     				android:id = "@+id/menu_search"
+                    android:layout_width ="40dp"
+                    android:layout_height ="40dp"
+                    android:contentDescription = "@string/menu_week_videos"
+                    android:src ="@drawable/search"
+                    android:layout_alignParentRight = "true"
+		            android:layout_alignParentTop = "true" >
+                </ImageView>
+                
+            
+        </RelativeLayout>
+        
+
+        
+
+
+    </RelativeLayout>
+
+</xnc.widget.SlideHolder>
