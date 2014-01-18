@@ -17,38 +17,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="50dp"
+            android:id="@+id/sidebar_menu"
             android:orientation="vertical" >
 
            <RelativeLayout
-                      android:id ="@+id/menu_guangchang"
-                    android:layout_height ="wrap_content"
-                    android:paddingLeft ="50dp"
-                    android:paddingRight ="70dp"
-                    android:paddingTop ="8dp"
-                    android:paddingBottom ="8dp"
-        
-                    android:layout_width ="wrap_content" >
-                   
-                    <ImageView
-                        android:id ="@+id/menu_image_guangchang"
-                         android:layout_width ="30dp"
-                         android:layout_height ="30dp"
-                         android:layout_marginRight ="6dp"
-                         android:contentDescription = "@string/menu_guangchang"
-                         android:src ="@drawable/home"
-                         android:layout_marginBottom ="4dp"
-                         android:layout_marginTop ="4dp" >
-                     </ImageView>
-                     <TextView
-                         android:layout_width ="wrap_content"
-                         android:layout_height ="wrap_content"
-                         android:text ="@string/menu_guangchang"
-                         android:layout_marginTop ="4dp"
-                         android:layout_toRightOf ="@+id/menu_image_guangchang"
-                         android:textSize ="20sp" >
-                     </TextView>
-                   
-                </RelativeLayout>
+                android:id ="@+id/menu_guangchang"
+                android:layout_height ="wrap_content"
+                android:paddingLeft ="50dp"
+                android:paddingRight ="70dp"
+                android:paddingTop ="8dp"
+                android:paddingBottom ="8dp"
+                android:layout_width ="wrap_content" >
+               
+                <ImageView
+                    android:id ="@+id/menu_image_guangchang"
+                     android:layout_width ="30dp"
+                     android:layout_height ="30dp"
+                     android:layout_marginRight ="6dp"
+                     android:contentDescription = "@string/menu_guangchang"
+                     android:src ="@drawable/home"
+                     android:layout_marginBottom ="4dp"
+                     android:layout_marginTop ="4dp" >
+                 </ImageView>
+                 <TextView
+                     android:layout_width ="wrap_content"
+                     android:layout_height ="wrap_content"
+                     android:text ="@string/menu_guangchang"
+                     android:layout_marginTop ="4dp"
+                     android:layout_toRightOf ="@+id/menu_image_guangchang"
+                     android:textSize ="20sp" >
+                 </TextView>
+               
+            </RelativeLayout>
                 <RelativeLayout
                       android:id ="@+id/menu_week_videos"
                     android:layout_height ="wrap_content"
@@ -86,11 +86,10 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:orientation="vertical"
-        android:layout_height="fill_parent" >
+	<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
         <RelativeLayout 
             android:layout_width="fill_parent"
             android:layout_height="50dp"
@@ -131,13 +130,28 @@
 		            android:layout_alignParentTop = "true" >
                 </ImageView>
                 
-            
         </RelativeLayout>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="100dp"
+            android:gravity="fill"
+            android:horizontalSpacing="0dp"
+            android:verticalSpacing="0dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:background="@color/black"
+            android:padding="0sp"
+            android:layout_marginTop="6sp"
+            android:layout_marginBottom="6sp"
+            
+            ptr:ptrDrawable="@drawable/android"
+            ptr:ptrMode="pullFromEnd" />
         
-
-        
-
-
-    </RelativeLayout>
+    </LinearLayout>
+    
 
 </xnc.widget.SlideHolder>

@@ -7,7 +7,6 @@
     <string name="menu_settings">Setting</string>
     <string name="menu_news">News</string>
     <string name="menu_feed">Feed</string>
-    
     <string name="menu_guangchang">热门广场</string>
     <string name="menu_week_videos">本周最火</string>
     <string name="menu_hot_videos">视频总榜</string>
@@ -18,6 +17,6 @@
     <string name="menu_my_videos">喜欢的视频</string>
     <string name="menu_down_videos">本地下载</string>
     <string name="menu_renzheng">应用授权</string>
-    
+    <string name="title_activity_video">VideoActivity</string>
 
 </resources>
